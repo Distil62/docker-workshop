@@ -18,7 +18,7 @@ namespace docker_workshop
             var bookService = new BookService(mongodbConnectionString, database);
 
             var book1 = new Book("Nouveau livre", 1m);
-            var book2 = new Book("Livre sur le CI/CD", 2m);
+            var book2 = new Book("Livre sur le CI/CD", 3m);
             
             bookService.Create(book1);
             bookService.Create(book2);
