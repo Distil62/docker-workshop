@@ -62,6 +62,8 @@ jobs:
         with:
           # Location of the scanner metadata report file
           scanMetadataReportFile: myApp/.sonarqube/out/.sonar/report-task.txt
+        env:
+          SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
 
       # AJOUTEZ ICI les instructions pour ajouter SonarQube
       # 1- Mettez en place une instance de SonarQube ACCESSIBLE DEPUIS LA PIPELINE (exposé sur le web)
