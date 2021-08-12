@@ -12,8 +12,6 @@ Vérifier vos installations avec :
 ```
 docker -v
 docker-compose -v
-dotnet --list-sdks
-dotnet --list-runtimes
 ```
 ## Comment faire ce workshop ?
 Vous devez suivre les étapes incluses dans le fichier steps.txt.
