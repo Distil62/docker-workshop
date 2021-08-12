@@ -45,7 +45,7 @@ jobs:
         run: |
           cd myApp
           dotnet tool install --global dotnet-sonarscanner
-          dotnet sonarscanner begin /k:"docker-workshop" /d:sonar.login="${{secrets.SONAR_TOKEN }}" /s:/app/myApp/SonarQube.Analysis.xml
+          dotnet sonarscanner begin /k:"docker-workshop" /d:sonar.login="${{secrets.SONAR_TOKEN }}" /s:$GITHUB_WORKSPACE/myApp/SonarQube.Analysis.xml
       
       - name: Build Application
         run: cd myApp && dotnet build
