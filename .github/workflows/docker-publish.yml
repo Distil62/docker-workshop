@@ -55,6 +55,14 @@ jobs:
           cd myApp
           dotnet sonarscanner end /d:sonar.login="${{secrets.SONAR_TOKEN}}"
 
+      - name: SonarQube Quality Gate Check
+        # You may pin to the exact commit or the version.
+        # uses: SonarSource/sonarqube-quality-gate-action@15767f0e4eb489cfdd989dc717fa78c038d0de8a
+        uses: SonarSource/sonarqube-quality-gate-action@v1.0.0
+        with:
+          # Location of the scanner metadata report file
+          scanMetadataReportFile: myApp/.sonarqube/out/.sonar/report-task.txt
+
       # AJOUTEZ ICI les instructions pour ajouter SonarQube
       # 1- Mettez en place une instance de SonarQube ACCESSIBLE DEPUIS LA PIPELINE (exposé sur le web)
       # 2- Pour dotnet core 
