@@ -42,7 +42,7 @@ jobs:
         run: cd myApp && dotnet restore
       
       - name: Sonar Begin
-        run: >
+        run: |
           cd myapp
           dotnet tool install --global dotnet-sonarscanner
           dotnet sonarscanner begin /k:"docker-workshop" /d:sonar.login="${{secrets.SONAR_TOKEN }}" /s:/app/myApp/SonarQube.Analysis.xml
@@ -51,7 +51,7 @@ jobs:
         run: cd myApp && dotnet build
       
       - name: Sonar End
-        run: >
+        run: |
           cd myApp
           dotnet sonarscanner end /d:sonar.login="${{secrets.SONAR_TOKEN}}"
 
