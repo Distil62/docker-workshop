@@ -1,5 +1,5 @@
 <SonarQubeAnalysisProperties  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <Property Name="sonar.host.url">`url de votre projet`</Property>
-  <Property Name="sonar.login">`Token de connection`</Property>
-  <Property Name="sonar.projectKey">`Nom de votre projet sonarqube`</Property>
+  <Property Name="sonar.host.url">http://78.199.48.68:9000/</Property>
+  <Property Name="sonar.login">0a70be67e9feb2644011efd7786069c6998c04ae</Property>
+  <Property Name="sonar.projectKey">docker-workshop</Property>
 </SonarQubeAnalysisProperties>
