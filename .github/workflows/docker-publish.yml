@@ -43,7 +43,7 @@ jobs:
       
       - name: Sonar Begin
         run: |
-          cd myapp
+          cd myApp
           dotnet tool install --global dotnet-sonarscanner
           dotnet sonarscanner begin /k:"docker-workshop" /d:sonar.login="${{secrets.SONAR_TOKEN }}" /s:/app/myApp/SonarQube.Analysis.xml
       
